@@ -14,8 +14,8 @@ const getState = ({ getStore, setStore, getActions }) => {
 			},
 			addContact: user => {
 				fetch("https://assets.breatheco.de/apis/fake/contact/", {
-					method: "POST", // or 'POST'
-					body: JSON.stringify(user), // data can be `string` or {object}!
+					method: "POST",
+					body: JSON.stringify(user), 
 					headers: {
 						"Content-Type": "application/json"
 					}

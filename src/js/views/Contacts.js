@@ -1,13 +1,13 @@
-import React, { useState, useEffect, useContext } from "react"; //paso 1 para acceder a context
+import React, { useState, useEffect, useContext } from "react"; 
 import { Link } from "react-router-dom";
-import { Context } from "../store/appContext"; //paso 2 para acceder a context
+import { Context } from "../store/appContext"; 
 
 import { ContactCard } from "../component/ContactCard.js";
 import { Modal } from "../component/Modal";
-import { checkPropTypes } from "prop-types";
+
 
 export const Contacts = () => {
-	const { store, actions } = useContext(Context); //paso 3 para acceder a context
+	const { store, actions } = useContext(Context); 
 	const [state, setState] = useState({
 		showModal: false
 	});

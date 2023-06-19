@@ -39,10 +39,10 @@ export const AddContact = () => {
 						<input type="text" className="form-control" placeholder="Enter address" name="phone" />
 					</div>
 					<button type="submit" className="btn btn-primary form-control">
-						save
+						Save
 					</button>
 					<Link className="mt-3 w-100 text-center" to="/">
-						or get back to contacts
+						Or get back to contacts
 					</Link>
 				</form>
 			</div>
