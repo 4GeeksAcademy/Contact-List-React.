@@ -21,7 +21,7 @@ export const Contacts = () => {
 		<div className="container">
 			<div>
 				<p className="text-right my-3">
-					<Link className="btn btn-success" to="/add">
+					<Link className="btn btn-success" to="/add" style={{ boxShadow: "2px 2px 4px rgba(0, 0, 0, 0.2)" }}>
 						Add new contact
 					</Link>
 				</p>
