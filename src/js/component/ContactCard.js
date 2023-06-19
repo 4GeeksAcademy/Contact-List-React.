@@ -2,16 +2,20 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
+import pikachu from "../../img/pikachu.jpg"
 
 export const ContactCard = props => {
 	const { store, actions } = useContext(Context);
 	const [state, setState] = useState({
-		//initialize state here
+
 	});
 
 	return (
 		<li className="list-group-item">
 			<div className="row w-100">
+			<div className="col-12 col-sm-6 col-md-3 px-0">
+					<img src={pikachu} alt="pika" className="rounded-circle mx-auto d-block img-fluid" style={{ width: "200px" }} />
+				</div>
 				
 				<div className="col-12 col-sm-6 col-md-9 text-center text-sm-left">
 					<div className=" float-right">
@@ -50,20 +54,14 @@ export const ContactCard = props => {
 	);
 };
 
-/**
- * Define the data-types for
- * your component's properties
- **/
+
 ContactCard.propTypes = {
 	history: PropTypes.object,
 	onDelete: PropTypes.func,
 	contact: PropTypes.object
 };
 
-/**
- * Define the default values for
- * your component's properties
- **/
+
 ContactCard.defaultProps = {
 	onDelete: null
 };

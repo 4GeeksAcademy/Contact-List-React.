@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
+import { FaBomb } from 'react-icons/fa';
+
 
 export const Modal = props => {
 	const { actions } = useContext(Context);
 	const [state, setState] = useState({
-		//initialize state here
+		
 	});
 	return (
 		<div className="modal" tabIndex="-1" role="dialog" style={{ display: props.show ? "inline-block" : "none" }}>
@@ -27,7 +29,7 @@ export const Modal = props => {
 						)}
 					</div>
 					<div className="modal-body">
-						<p>Warning: unknown consequences after this point... Kidding!</p>
+						<p>Warning: <FaBomb /><FaBomb /><FaBomb /></p>
 					</div>
 					<div className="modal-footer">
 						<button
@@ -54,20 +56,14 @@ export const Modal = props => {
 		</div>
 	);
 };
-/**
- * Define the data-types for
- * your component's properties
- **/
+
 Modal.propTypes = {
 	history: PropTypes.object,
 	onClose: PropTypes.func,
 	show: PropTypes.bool
 };
 
-/**
- * Define the default values for
- * your component's properties
- **/
+
 Modal.defaultProps = {
 	show: false,
 	onClose: null
