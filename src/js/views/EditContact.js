@@ -50,20 +50,23 @@ export const EditContact = () => {
 					<div className="form-group">
 						<label>Phone</label>
 						<input
-							type="phone"
+							type="text"
+							inputMode="numeric"
 							className="form-control"
 							placeholder="Enter phone"
-							name="address"
+							name="phone"
 							defaultValue={user.phone}
+							pattern="[0-9]*"
 						/>
 					</div>
+
 					<div className="form-group">
 						<label>Address</label>
 						<input
 							type="text"
 							className="form-control"
 							placeholder="Enter address"
-							name="phone"
+							name="address"
 							defaultValue={user.address}
 						/>
 					</div>

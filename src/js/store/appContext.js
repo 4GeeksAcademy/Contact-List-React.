@@ -15,7 +15,7 @@ const injectContext = PassedComponent => {
 				getActions: () => state.actions,
 				setStore: updatedStore =>
 					setState({
-						store: Object.assign(state.store, updatedStore),
+						store: { ...state.store, ...updatedStore }, // Utilizar el Spread Operator para fusionar los cambios en el estado
 						actions: { ...state.actions }
 					})
 			})

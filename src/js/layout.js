@@ -10,9 +10,7 @@ import { EditContact } from "./views/EditContact.js";
 
 export const Layout = () => {
 	return (
-		<div>
 			<BrowserRouter>
-				<div>
 					<Routes>
 						<Route exact path="/index.html" element={<Contacts />} />
 						<Route exact path="/" element={<Contacts />} />
@@ -21,9 +19,8 @@ export const Layout = () => {
 						<Route exact path="/edit/:id" element={<EditContact/>} />
 						<Route render={() => <h1 className="notfound">Not found!</h1>} />
 					</Routes>
-				</div>
+				
 			</BrowserRouter>
-		</div>
 	);
 };
 
